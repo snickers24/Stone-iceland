@@ -1,0 +1,54 @@
+Program calc;
+uses crt;
+   var         a,b,p:integer;
+               c,x1,x2,dis:real;
+               d:string;
+begin
+  clrscr;
+  writeln('Это калькулятор.Введите число(а) и действие');
+  writeln('Введите первое число');
+  readln(a);
+  writeln('Введите действие');
+  readln(d);
+            case d of 
+            'sq','ln' :    begin
+                          case d of
+                          'sq': c:=sqrt(a);
+                          'ln': c:=ln(a);
+                           end;
+                           writeln('Результат =',c:3:2);
+                           end;
+ '+','-','*','/':begin
+                 writeln ('Введите второе число');
+                 readln(b);
+                 case d of
+                   '+': c:=a+b;
+                   '-': c:=a-b;
+                   '*': c:=a*b;
+                   '/': c:=a/b;
+                 end;
+                 writeln('Результат =',c:3:2);
+                 end;
+           
+           
+  'kv': begin
+  writeln('ВВедите второе число');            
+  readln(b); 
+  writeln ('Введите третье число');
+  readln(p);
+              case d of
+               'kv': dis:=b*b-4*a*p;
+             end;
+            
+            if dis>=0 then  begin
+              x1:=(-b+sqrt(dis)/2*a);
+              x2:=(-b-sqrt(dis)/2*a);
+              writeln('Первый корень =',x1:3:2);
+              writeln('Второй корень =',x2:3:2);
+                            end
+              else
+              writeln('Корней нет');
+              end;
+              end;
+                           
+end.               
