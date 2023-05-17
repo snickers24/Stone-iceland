@@ -1,7 +1,7 @@
 # Stone-iceland
 First repository
 ## Состав бригады
-Самкин
+Самкин николай
 
 Власов
 
